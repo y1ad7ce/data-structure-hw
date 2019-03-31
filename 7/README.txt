@@ -12,18 +12,18 @@ p: The number of users that a function will print out
 a: The number of friends this particular user has
 
 loadConnections():
-O(m)
+O(m*log(d)) OR O(m*log(d)*log(X)) where X=m or n, depending on vector/set implementation
 loadLocations():
-O(l)
+O(l*log(l))
 printAllUsersWithinDistance():
 O(l)
 printDegreesHistogram():
 O(d)
 printDegreesOfAll():
-O(l)
+O(d)
 printFriendsWithDegree():
-O(a)
+O(log(d) * m) OR O(log(d) * n)
 printFriendsWithinDistance():
-O(a)
+O(log(n) + m*log(l)) OR O(log(n) + n*log(l))
 printUsersWithinIDRange():
-O(p)
+O(n)
